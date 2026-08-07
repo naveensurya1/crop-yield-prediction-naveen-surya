@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 import { validatePassword } from "../../utils/validators";
 import { getRoles, registerUser } from "../../services/authService";
-import { MailIcon, LockIcon, UserIcon, RoleIcon, ChevronIcon, EyeIcon, EyeOffIcon, CheckIcon, LeafIcon } from "./AuthIcons";
+import { MailIcon, LockIcon, UserIcon, RoleIcon, ChevronIcon, EyeIcon, EyeOffIcon, CheckIcon, LeafIcon } from "./Authicons";
 import "../../styles/auth.css";
 
 function Register() {

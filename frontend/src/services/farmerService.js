@@ -1,42 +1,33 @@
 import api from "../api/axios";
 
-const API_BASE = "http://127.0.0.1:8000";
-
-const authHeaders = () => ({
-    headers: {
-        Authorization: `Bearer ${localStorage.getItem("access_token")}`
-    }
-});
-
+// Get logged-in farmer profile
 export const getProfile = () => {
-
-    return axios.get(`${API_BASE}/farmer/profile`, authHeaders());
-
+    return api.get("/farmer/profile");
 };
 
+// Update profile
 export const updateProfile = (data) => {
-
-    return axios.put(`${API_BASE}/farmer/profile`, data, authHeaders());
-
+    return api.put("/farmer/profile", data);
 };
 
+// Upload profile photo
 export const uploadProfilePhoto = (file) => {
 
     const formData = new FormData();
-
     formData.append("photo", file);
 
-    return axios.post(`${API_BASE}/farmer/profile/photo`, formData, {
-        headers: {
-            ...authHeaders().headers,
-            "Content-Type": "multipart/form-data"
+    return api.post(
+        "/farmer/profile/photo",
+        formData,
+        {
+            headers: {
+                "Content-Type": "multipart/form-data"
+            }
         }
-    });
-
+    );
 };
 
+// Change password
 export const changePassword = (data) => {
-
-    return axios.put(`${API_BASE}/farmer/profile/password`, data, authHeaders());
-
+    return api.put("/farmer/profile/password", data);
 };

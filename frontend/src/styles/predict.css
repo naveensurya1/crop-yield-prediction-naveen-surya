@@ -1,0 +1,358 @@
+.predict-page {
+    max-width: 980px;
+}
+
+.predict-header {
+    margin-bottom: 24px;
+}
+
+.predict-header h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 23px;
+    color: #161b18;
+}
+
+.predict-header p {
+    font-size: 14px;
+    color: #6b756f;
+    margin-top: 4px;
+}
+
+.predict-card {
+    background: #ffffff;
+    border: 1px solid #e3e7e1;
+    border-radius: 16px;
+    padding: 28px 32px;
+}
+
+.predict-section-title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #3a423d;
+    margin: 22px 0 14px;
+}
+
+.predict-section-title:first-child {
+    margin-top: 0;
+}
+
+.predict-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px 18px;
+}
+
+.field label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #3a423d;
+    margin-bottom: 6px;
+}
+
+.field-input {
+    position: relative;
+}
+
+.field-input input,
+.field-input select {
+    width: 100%;
+    height: 44px;
+    padding: 0 14px;
+    border-radius: 10px;
+    border: 1px solid #dde2dc;
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    color: #1a201d;
+    outline: none;
+    background: #fff;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.field-input select {
+    padding-right: 34px;
+    cursor: pointer;
+    appearance: none;
+}
+
+.field-input .chevron {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8b958e;
+    pointer-events: none;
+}
+
+.field-input input:focus,
+.field-input select:focus {
+    border-color: #1f7d4f;
+    box-shadow: 0 0 0 3px rgba(31, 125, 79, 0.14);
+}
+
+.field-with-unit {
+    display: flex;
+    gap: 8px;
+}
+
+.field-with-unit input {
+    flex: 1;
+}
+
+.field-with-unit select {
+    width: 110px;
+    padding-right: 30px;
+}
+
+.predict-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 26px;
+}
+
+.predict-submit-btn {
+    height: 46px;
+    padding: 0 28px;
+    border: none;
+    border-radius: 10px;
+    background: #1f7d4f;
+    color: #fff;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 14.5px;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+.predict-submit-btn:hover:not(:disabled) {
+    background: #17603c;
+}
+
+.predict-submit-btn:disabled {
+    background: #9fc9b1;
+    cursor: not-allowed;
+}
+
+/* ---------- Result view ---------- */
+
+.result-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-bottom: 18px;
+}
+
+.result-stat-card {
+    background: linear-gradient(135deg, #0b3d2e, #1f7d4f);
+    color: #fff;
+    border-radius: 16px;
+    padding: 26px 28px;
+}
+
+.result-stat-label {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 6px;
+}
+
+.result-stat-value {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.result-confidence-card {
+    background: #ffffff;
+    border: 1px solid #e3e7e1;
+    border-radius: 16px;
+    padding: 26px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.confidence-track {
+    height: 8px;
+    border-radius: 999px;
+    background: #eef1ee;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.confidence-fill {
+    height: 100%;
+    background: #1f7d4f;
+    border-radius: 999px;
+}
+
+.result-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.result-card {
+    background: #ffffff;
+    border: 1px solid #e3e7e1;
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.result-card h3 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 14.5px;
+    color: #161b18;
+    margin-bottom: 14px;
+}
+
+.recommendation-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.recommendation-list li {
+    display: flex;
+    gap: 10px;
+    font-size: 13.5px;
+    color: #3a423d;
+    line-height: 1.5;
+}
+
+.recommendation-list li::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #1f7d4f;
+    margin-top: 7px;
+    flex-shrink: 0;
+}
+
+.meta-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 9px 0;
+    border-bottom: 1px solid #eef1ee;
+    font-size: 13.5px;
+}
+
+.meta-row:last-child {
+    border-bottom: none;
+}
+
+.meta-label {
+    color: #6b756f;
+}
+
+.meta-value {
+    font-weight: 600;
+    color: #161b18;
+}
+
+/* Comparison bars */
+
+.compare-item {
+    margin-bottom: 14px;
+}
+
+.compare-item:last-child {
+    margin-bottom: 0;
+}
+
+.compare-label-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12.5px;
+    color: #6b756f;
+    margin-bottom: 5px;
+}
+
+.compare-track {
+    height: 10px;
+    border-radius: 999px;
+    background: #eef1ee;
+    overflow: hidden;
+}
+
+.compare-fill {
+    height: 100%;
+    border-radius: 999px;
+}
+
+.compare-fill.current {
+    background: #1f7d4f;
+}
+
+.compare-fill.previous {
+    background: #8fc5a4;
+}
+
+.compare-fill.district {
+    background: #c8e6a0;
+}
+
+.result-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.result-secondary-btn {
+    height: 44px;
+    padding: 0 20px;
+    border-radius: 10px;
+    border: 1px solid #dde2dc;
+    background: #fff;
+    color: #3a423d;
+    font-weight: 600;
+    font-size: 13.5px;
+    cursor: pointer;
+}
+
+.result-secondary-btn:hover {
+    border-color: #1f7d4f;
+    color: #1f7d4f;
+}
+
+.result-new-btn {
+    height: 44px;
+    padding: 0 20px;
+    border-radius: 10px;
+    border: none;
+    background: #1f7d4f;
+    color: #fff;
+    font-weight: 600;
+    font-size: 13.5px;
+    cursor: pointer;
+}
+
+.result-new-btn:hover {
+    background: #17603c;
+}
+
+@media (max-width: 820px) {
+    .predict-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .result-hero,
+    .result-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 560px) {
+    .predict-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .predict-card {
+        padding: 22px 18px;
+    }
+}

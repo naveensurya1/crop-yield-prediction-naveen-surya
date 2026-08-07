@@ -10,6 +10,14 @@ export const loginUser = (userData) => {
     return api.post("/auth/login", userData);
 };
 
+export const googleLogin = (credential) => {
+    return api.post("/auth/google", { token: credential });
+};
+
+export const completeGoogleSignup = (credential, role) => {
+    return api.post("/auth/google/complete", { token: credential, role });
+};
+
 // Get Roles
 export const getRoles = () => {
     return api.get("/roles");
